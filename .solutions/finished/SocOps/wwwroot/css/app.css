@@ -401,6 +401,10 @@ button:disabled {
     min-height: 60px;
 }
 
+.min-h-\[320px\] {
+    min-height: 320px;
+}
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(-25%);

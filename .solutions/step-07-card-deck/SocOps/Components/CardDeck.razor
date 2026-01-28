@@ -18,28 +18,27 @@
 
     <!-- Card Area -->
     <div class="flex-1 flex items-center justify-center p-6">
-        <div class="relative w-full max-w-sm">
+        <div class="w-full max-w-xs">
             <!-- Clickable Card -->
-            <button @onclick="HandleCardTap" class="w-full aspect-[3/4] perspective-1000" disabled="@IsAllDone">
+            <button 
+                @onclick="HandleCardTap" 
+                class="w-full bg-card rounded-2xl p-8 min-h-[320px] flex flex-col items-center justify-center text-center @(IsFlipped ? "neon-border-pink" : "neon-border")" 
+                disabled="@IsAllDone">
                 @if (!IsFlipped)
                 {
                     <!-- Card Back - Tap to Reveal -->
-                    <div class="absolute inset-0 bg-card rounded-2xl neon-border flex flex-col items-center justify-center p-6">
-                        <div class="text-6xl mb-4">🎴</div>
-                        <p class="text-cyan font-display uppercase tracking-wider">TAP TO REVEAL</p>
-                    </div>
+                    <div class="text-6xl mb-4">🎴</div>
+                    <p class="text-cyan font-display uppercase tracking-wider text-lg">TAP TO REVEAL</p>
                 }
                 else
                 {
                     <!-- Card Front - Question -->
-                    <div class="absolute inset-0 bg-card rounded-2xl neon-border-pink flex flex-col items-center justify-center p-6 text-center">
-                        <p class="text-2xl font-semibold text-white mb-8 leading-relaxed">
-                            @CurrentQuestion
-                        </p>
-                        <p class="text-sm text-gray-500 font-display uppercase">
-                            Find someone who...
-                        </p>
-                    </div>
+                    <p class="text-xl font-semibold text-white mb-6 leading-relaxed">
+                        @CurrentQuestion
+                    </p>
+                    <p class="text-sm text-gray-500 font-display uppercase">
+                        Find someone who...
+                    </p>
                 }
             </button>
         </div>
@@ -105,7 +104,7 @@
         var random = new Random();
         Deck = Questions.QuestionsList.OrderBy(_ => random.Next()).ToList();
         CurrentIndex = 0;
-        IsFlipped = false; // Start with card face down
+        IsFlipped = false;
     }
 
     private void ResetDeck()
@@ -119,7 +118,7 @@
     {
         if (!IsFlipped && !IsAllDone)
         {
-            IsFlipped = true; // Reveal the card
+            IsFlipped = true;
         }
     }
 
@@ -131,12 +130,6 @@
             SkipCount++;
 
         CurrentIndex++;
-        IsFlipped = false; // Show next card face down
+        IsFlipped = false;
     }
 }
-
-<style>
-    .perspective-1000 {
-        perspective: 1000px;
-    }
-</style>
