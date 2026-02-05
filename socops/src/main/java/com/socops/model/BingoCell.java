@@ -1,5 +1,7 @@
 package com.socops.model;
 
+import com.socops.data.IcebreakerPrompts;
+
 /**
  * One tile on the 5×5 bingo grid.
  *
@@ -17,14 +19,6 @@ public record BingoCell(int id, String prompt, boolean selected, boolean freeCel
 
     /** Build the centre free-space tile (always pre-tapped). */
     public static BingoCell ofFreeCell(int id) {
-        return new BingoCell(id, IcebreakerLabel.FREE, true, true);
-    }
-
-    /**
-     * Small holder so the record file stays self-contained
-     * while referencing the canonical free-cell text.
-     */
-    private static final class IcebreakerLabel {
-        static final String FREE = "FREE SPACE";
+        return new BingoCell(id, IcebreakerPrompts.FREE_CELL_LABEL, true, true);
     }
 }
