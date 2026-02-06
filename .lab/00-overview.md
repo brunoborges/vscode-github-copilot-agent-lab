@@ -1,12 +1,12 @@
 # 🎮 VS Code GitHub Copilot Agent Lab
 
-[🎮 Play Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
 
 ---
 
 > **Duration:** ~1 hour  
 > **Level:** Intermediate  
-> **Stack:** C# / .NET 10 / Blazor WebAssembly
+> **Stack:** Java 21 / Spring Boot 3.4.2 / Apache Maven
 
 Welcome to Soc Ops — a hands-on workshop where you'll transform a simple Social Bingo app into something amazing using VS Code's Agent Mode with GitHub Copilot.
 
@@ -19,7 +19,7 @@ Before you begin, verify:
 - [ ] VS Code **v1.107+** (no pending updates)
 - [ ] Signed in with **GitHub Copilot** (Pro, Business, or Enterprise)
 - [ ] Git installed
-- [ ] .NET 10 SDK installed
+- [ ] Java 21 JDK installed
 - [ ] Chat panel open and Agent ready
 
 > 💡 **Tip:** Use the DevContainer for a pre-configured environment!
@@ -65,6 +65,6 @@ Before you begin, verify:
 
 ---
 
-[🎮 Play Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/) • [📚 Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
+[📚 Lab Guide](https://brunoborges.github.io/vscode-github-copilot-agent-lab/docs/) • [← README](../README.md)
 
-*Created for .NET developers by the VS Code and .NET teams*
+*Created for Java developers by the VS Code and Java teams*

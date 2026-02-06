@@ -5,10 +5,9 @@
     "setup": "resourceFilename == 'README.md'"
   },
   "chat.tools.terminal.autoApprove": {
-    "dotnet build": true,
-    "dotnet run": true,
-    "dotnet test": true,
-    "dotnet restore": true
+    "./mvnw clean package": true,
+    "./mvnw test": true,
+    "./mvnw spring-boot:run": true
   },
   "github.copilot.chat.githubMcpServer.enabled": true,
   "github.copilot.chat.githubMcpServer.toolsets": [

@@ -2,9 +2,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "dotnet: run",
+			"label": "mvn: run",
 			"type": "shell",
-			"command": "dotnet run --project SocOps/SocOps.csproj",
+			"command": "cd socops && ./mvnw spring-boot:run",
 			"isBackground": true,
 			"problemMatcher": {
 				"pattern": {
@@ -12,8 +12,8 @@
 				},
 				"background": {
 					"activeOnStart": true,
-					"beginsPattern": "^.*Building.*",
-					"endsPattern": "^.*Application started.*"
+					"beginsPattern": "^.*Started.*Application.*",
+					"endsPattern": "^.*Started.*Application.*in.*seconds.*"
 				}
 			},
 			"presentation": {
@@ -25,11 +25,16 @@
 			}
 		},
 		{
-			"label": "dotnet: build",
+			"label": "mvn: build",
 			"type": "shell",
-			"command": "dotnet build SocOps/SocOps.csproj",
-			"group": "build",
-			"problemMatcher": "$msCompile"
+			"command": "cd socops && ./mvnw clean package",
+			"group": "build"
+		},
+		{
+			"label": "mvn: test",
+			"type": "shell",
+			"command": "cd socops && ./mvnw test",
+			"group": "test"
 		}
 	]
 }

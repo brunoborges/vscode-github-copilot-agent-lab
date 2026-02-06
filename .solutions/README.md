@@ -11,9 +11,9 @@ This folder contains step-by-step checkpoints for the VS Code Agent Lab workshop
 
 | Step | Description | Key Changes |
 |------|-------------|-------------|
-| `step-00-baseline` | Starting point | Clean Blazor app with basic bingo game |
+| `step-00-baseline` | Starting point | Clean Spring Boot app with basic bingo game |
 | `step-01-instructions` | Workspace instructions | Added `.github/copilot-instructions.md` |
-| `step-02-linting` | Linting rules | Added `.editorconfig` with C# analyzers |
+| `step-02-linting` | Linting rules | Added Checkstyle or Java linting rules |
 | `step-03-readme-update` | Enhanced README | Made README more engaging as landing page |
 | `step-04-redesign-cyberpunk` | UI Redesign | Cyberpunk Neon theme applied |
 | `step-05-quiz-techlife` | Quiz Master | Tech Life Bingo questions |
@@ -31,8 +31,8 @@ cp -r .solutions/step-04-redesign-cyberpunk/SocOps ./SocOps
 
 ### Option 2: Run a checkpoint directly
 ```bash
-cd .solutions/step-04-redesign-cyberpunk
-dotnet run --project SocOps/SocOps.csproj
+cd .solutions/step-04-redesign-cyberpunk/socops
+./mvnw spring-boot:run
 ```
 
 ### Option 3: Compare your changes
@@ -48,7 +48,7 @@ See [`.lab/GUIDE.md`](../.lab/GUIDE.md) for the full workshop instructions.
 ## Checkpoint Details
 
 ### Step 0: Baseline
-The starting point - a working Blazor WebAssembly bingo game with:
+The starting point - a working Spring Boot bingo game with:
 - Start screen with "Start Game" button
 - 5x5 bingo board with random questions
 - Click to mark squares
@@ -61,7 +61,7 @@ After running "Generate Workspace Instructions":
 
 ### Step 2: Linting Rules  
 After adding linting for code quality:
-- `.editorconfig` - C# analyzer rules for unused variables, async patterns
+- Checkstyle or Java linting rules for unused imports, code style
 
 ### Step 3: README Update
 After making the README engaging:

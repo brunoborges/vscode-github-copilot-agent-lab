@@ -1,25 +1,24 @@
 {
-  "name": "Soc-Ops Blazor C#",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
+  "name": "Soc-Ops Spring Boot Java",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-dotnettools.csdevkit",
-        "ms-dotnettools.csharp"
+        "vscjava.vscode-java-pack"
       ]
     },
     "codespaces": {
       "openFiles": [
-        "SocOps/Pages/Home.razor",
+        "socops/src/main/java/com/socops/web/BingoRestController.java",
         "README.md"
       ]
     }
   },
-  "postCreateCommand": "dotnet restore SocOps/SocOps.csproj",
-  "forwardPorts": [5166],
+  "postCreateCommand": "cd socops && ./mvnw dependency:resolve",
+  "forwardPorts": [8080],
   "portsAttributes": {
-    "5166": {
-      "label": "Blazor Dev Server",
+    "8080": {
+      "label": "Spring Boot Dev Server",
       "onAutoForward": "openPreview"
     }
   }

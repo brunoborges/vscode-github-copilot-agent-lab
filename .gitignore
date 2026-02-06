@@ -1,24 +1,21 @@
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+# Maven build output
+target/
 
-# Visual Studio cache/options
-.vs/
+# Java compiled classes and archives
+*.class
+*.jar
+*.log
+
+# IDE — IntelliJ
+.idea/
+*.iml
+
+# IDE — Eclipse
+.settings/
+.project
+.classpath
 
 # Visual Studio Code
-!.vscode/extensions.json
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -26,28 +23,10 @@ bld/
 !.vscode/extensions.json
 !.vscode/*.json
 
-# User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Files built by Visual Studio
-*.pidb
-*.svclog
-*.scc
-
 # Editor directories and files
-.idea
 .DS_Store
 *.sw?
 .playwright-mcp
-
-# .NET Core
-project.lock.json
-project.fragment.lock.json
-artifacts/
 
 # Local
 *.local

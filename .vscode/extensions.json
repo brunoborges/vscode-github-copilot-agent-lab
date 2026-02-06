@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "ms-dotnettools.csdevkit",
-    "ms-dotnettools.csharp"
+    "vscjava.vscode-java-pack"
   ]
 }
